@@ -1,0 +1,163 @@
+/*
+====================================================================================
+
+                                    GENERIC CSS
+
+====================================================================================
+*/
+
+//generic btn =======================
+
+.generic-btn {
+    transition: all .5s;
+    &:link,
+    &:visited {
+        display: inline-block;
+        padding: 10px 30px;
+        border-radius: 100px;
+    }
+}
+// red border =====================
+
+.red-border{
+    transition: all .5s;
+    border: 1.5px solid #F02640;
+    &:hover{
+        background-color: #f02640;
+    }
+}
+// generic title ================================
+
+        .generic-title{
+            h3{
+                position: relative;
+                padding-bottom: 1.2rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                font-size: 20px;
+                border-bottom: 2px solid rgba(0,0,0,0.2);
+                &::after{
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    bottom: -2px;
+                    width: 80px;
+                    height: 4px;
+                    background-color: #000;
+                }
+            }
+            
+                .top-rate-product{
+                    font-size: 14px;
+                    margin-right: 7px !important;
+                    padding-bottom: 1.8rem !important;
+                }
+        }
+
+// generic rating ========================
+ul.rating{
+    list-style: none;
+    margin: 0 !important;
+    padding: 0 !important;
+    li{
+        display: inline-block;
+        i{
+            color: #777;
+        }
+    }
+}
+// gray content ===========
+.gray-content{
+    color: #777;
+    font-weight: 500;
+    text-transform: capitalize;
+    font-size: 18px;
+}
+//current price ================
+.current-price{
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+}
+// gray color =================
+.gray-color{
+    color: #777;
+}
+// success color =======================
+.success{
+    color: orange !important;
+}
+//red background ================
+.bg-red{
+    background-color: #F02640;
+    border: 1.5px solid transparent;
+    transition: .5s;
+    &:hover{
+        background-color: transparent;
+        color: #333 !important;
+        border: 1.5px solid #f02640;
+    }
+}
+// product carousel box
+                    .product-carousel-box{
+                    .product-carousel-img{
+                        position: relative;
+                        transition: all .5s;
+                        border-left: 2px solid transparent;
+                            border-right: 2px solid transparent;
+                            border-bottom: 2px solid transparent;
+                        &:hover{
+                            border-left: 2px solid #F02640;
+                            border-right: 2px solid #F02640;
+                            border-bottom: 2px solid #F02640;
+                        }
+                        &::after{
+                            visibility: hidden;
+                            transition: .5s;
+                            opacity: 0;
+                            position: absolute;
+                            content: "";
+                            text-transform: uppercase;
+                            right: 0;
+                            bottom: 0;
+                            width: 60px;
+                            height: 60px;
+                            background-color: #F02640;
+                            clip-path: polygon(0 100%,100% 0,100% 100%);
+                        }
+                        &:hover::after{
+                            visibility: visible;
+                            opacity: 1;
+                        }
+                        &::before{
+                            content: "sale";
+                            position: absolute;
+                            right: 0;
+                            bottom: 10px;
+                            z-index: 2;
+                            color: #fff;
+                            text-transform: uppercase;
+                            transform: skewY(-45deg) skewX(29deg);
+                        }
+                        img:last-child{
+                            position: absolute;
+                            left: 0;
+                            top: 0;
+                            visibility: hidden;
+                            object-fit: cover;
+                            object-position: center;
+                            height: 100%;
+                            transition: .5s;
+                            opacity: 0;
+                        }
+                        &:hover{
+                            img:last-child{
+                                visibility: visible;
+                                
+                                opacity: 1;
+                            }
+                        }
+                        
+                    }
+                    
+                }

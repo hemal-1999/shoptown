@@ -1,0 +1,274 @@
+/*
+=======================================================================
+                                HEADER
+=======================================================================
+*/
+
+
+// header ===================================
+header {
+
+
+    // top header bar ==========================
+    .top-header-bar {
+        background-color: #F02640;
+        color: #fff;
+        height: 4rem;
+        margin: 0;
+
+        //top header content=======================
+        .top-header-content {
+            line-height: 65px;
+            width: 90%;
+            float: left;
+
+            .catagory-parent {
+                &:hover {
+                    ul.catagory {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: scale(1);
+                    }
+                }
+
+                //catagory title ===========================
+                p.catagory-title {
+                    width: 100%;
+                    height: 4rem;
+                    background-color: #000000;
+                    text-transform: uppercase;
+                    display: inline-block;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: 0;
+                    position: relative;
+                    line-height: 70px;
+                    cursor: pointer;
+                }
+
+                // catagory item ================
+                ul.catagory {
+                    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                    transition: .5s;
+                    opacity: 0;
+                    visibility: hidden;
+                    transform: scale(0);
+                    position: absolute;
+                    top: 100%;
+                    width: 100%;
+                    z-index: 2;
+                    padding-left: 0;
+                    list-style: none;
+
+                    li {
+                        text-align: center;
+                        background-color: #eee;
+                        transition: .5s;
+
+                        &:hover {
+                            background-color: #000;
+
+                            a {
+                                color: #fff;
+                                margin-left: 25px !important;
+                            }
+                        }
+
+                        &:not(:first-child) {
+                            margin-top: 0px;
+                        }
+
+                        a {
+                            transition: .5s;
+                            text-transform: uppercase;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+
+            //search input box =============================
+            input {
+                border: none;
+                height: 3rem;
+                box-shadow: border-box;
+                padding: 0 25px;
+                border-top-left-radius: 100px;
+                border-bottom-left-radius: 100px;
+                text-transform: capitalize;
+            }
+
+        }
+
+        //search icon ==============================
+        .search-icon {
+            background-color: #000;
+            height: 3rem;
+            margin-top: 8px;
+            border-bottom-right-radius: 100px;
+            border-top-right-radius: 100px;
+
+            i.fa-search {
+                font-size: 30px;
+            }
+        }
+
+        // business item ===================================
+        .business-time {
+            position: relative;
+            height: 3rem;
+            margin-top: 8px;
+            color: #000;
+            text-align: center;
+            border-radius: 100px;
+            background-color: #fff;
+
+            // business item logo ===========================
+            a > i {
+                color: #333;
+                cursor: pointer;
+                font-size: 30px;
+            }
+
+            &:hover > .business-time-item {
+                visibility: visible;
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            // business item card ===========================
+            .business-time-item {
+                overflow: scroll;
+                visibility: hidden;
+                z-index: 2;
+                opacity: 0;
+                transition: all .5s;
+                transform: scale(0);
+                border-radius: 10px;
+                box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+                width: 25vw;
+                height: 19rem;
+                position: absolute;
+                left: -10vw;
+                top: 105%;
+                background-color: #eee;
+
+                p.card-product-title {
+                    text-transform: uppercase;
+                    color: #555;
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+
+
+
+
+
+    // main header ==========================================
+    .main-header {
+        background-image: url('../images/bg-img-1.jpg');
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+
+        // first slider =============================
+        .header-slider-1 {
+            background-image: url(../images/slider-1.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            position: relative;
+        }
+
+        // second slider =============================
+        .header-slider-2 {
+            background-image: url(../images/slider-1.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            position: relative;
+        }
+
+        //third slider ==============================
+        .header-slider-3 {
+            background-image: url(../images/slider-1.jpg);
+            background-size: cover;
+            background-position: center;
+            height: 60vh;
+            position: relative;
+        }
+
+        // header slider content ======================
+        .header-slider-content {
+            position: absolute;
+            left: 45%;
+            top: 35%;
+            transform: translate(-50%, -50%);
+
+            h1 {
+                text-transform: uppercase;
+                color: #777;
+                font-family: 'Pacifico', cursive;
+                font-weight: 400;
+                animation-delay: 0;
+            }
+
+            p {
+                font-weight: 900;
+                font-size: 60px;
+                text-transform: uppercase;
+                animation-delay: 1s;
+            }
+
+            p {
+                text-transform: uppercase;
+                color: #777;
+                font-weight: 500;
+                font-size: 20px;
+                text-transform: uppercase;
+                animation-delay: 1.5s;
+            }
+
+            a {
+                text-transform: uppercase;
+                font-size: 20px;
+                color: #555;
+                transition: all .5s;
+                animation-delay: 2s;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+
+    }
+}
+
+// customar support ===================================================
+.customar-support {
+
+    // customar support right side ================================
+    .right-support {
+        border-right: 1.5px solid rgba(0, 0, 0, 0.2);
+    }
+
+    // customar support icon =============================
+    i.support-icon {
+        text-align: center;
+        font-size: 40px;
+        line-height: 65px;
+    }
+
+    // customar support title ===================================
+    p.support-title {
+        color: #777;
+    }
+}
+
+
+
+
+
+
